@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basicaddon Project</title>
+    <style>
+      h1,
+      h2 {
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      P {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      footer {
+        margin-top: 10px;
+        padding-bottom: 85px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+      }
+
+      button {
+        margin: 10px;
+        color: white;
+        background: pink;
+        border: 2px solid whitesmoke;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 16px;
+        transition: all 200ms ease ease-in-out;
+      }
+
+      button:hover {
+        background: blueviolet;
+        cursor: pointer;
+      }
+
+      body {
+        background: radial-gradient(
+          circle at 7.5% 24%,
+          rgb(237, 161, 193) 0%,
+          rgb(250, 178, 172) 25.5%,
+          rgb(190, 228, 210) 62.3%,
+          rgb(215, 248, 247) 93.8%
+        );
+        text-align: center;
+      }
+
+      footer {
+        color: white;
+      }
+
+      .container {
+        border-radius: 25px;
+        background: white;
+        border-color: pink;
+        color: rgb(197, 235, 222);
+        max-width: 600px;
+        padding: 30px 50px;
+        margin: 20px auto;
+      }
+
+      .darkTheme {
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+      }
+
+      .darkTheme:hover {
+        background: black;
+        color: white;
+      }
+
+      .darken {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(0, 0, 0) 0%,
+          rgb(64, 64, 64) 90.2%
+        );
+        color: white;
+      }
+
+      .darken .container {
+        background: black;
+        color: white;
+      }
+
+      .darken button {
+        color: white;
+        background-color: black;
+        border: 2px solid grey;
+      }
+
+      .darken button:hover {
+        background: white;
+        color: black;
+      }
+      .darken .darkTheme {
+        color: white;
+        background-color: black;
+        border: 2px solid grey;
+        transition: all 200ms ease ease-in-out;
+      }
+      .darken .darkTheme:hover {
+        background: white;
+        color: black;
+      }
+
+      .darken .intro-only {
+        text-align: justify;
+        color: white;
+      }
+
+      .intro-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+        width: 600px;
+        height: 250px;
+      }
+
+      .intro-picture:hover {
+        transform: scale(1.1);
+        filter: opacity(70%);
+      }
+
+      .image-gallery {
+        display: grid;
+        grid-gap: 10px;
+        margin-top: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      .image-gallery img {
+        width: 100%;
+        border-radius: 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .image-gallery :hover {
+        transform: scale(1.2);
+        filter: opacity(70%);
+      }
+
+      .intro-only {
+        text-align: justify;
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="darkTheme">Change Theme</button>
+    <div class="container">
+      <h1>Reading</h1>
+
+      <h2>One of my favorite hobbies</h2>
+      <span class="intro-only">
+        <p>
+          There's nothing like the smell of old books or the crack of a new
+          one's spine, and it turns out that diving into a page-turner can
+          enrich your health and happiness. Although more people own e-books and
+          subscribe to services like Audible on Amazon, 65 percent of U.S.
+          adults report reading a print book. As Dr. Seuss once wrote, "The more
+          that you read, the more things you will know. The more that you learn,
+          the more places you'll go." Diving into a good book opens up a whole
+          world of knowledge starting from a very young age.
+        </p>
+      </span>
+      <a href="https://www.penguin.co.uk/genres/fiction-books">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/135/155/original/yin-adapted-2-scaled.jpg?1721774285"
+          alt
+          class="intro-picture"
+        />
+      </a>
+
+      <div class="image-gallery">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/901/original/Irish-childrens-books-e1693410021475.jpeg?1721688590"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/903/original/17113.jpg?1721688779"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/904/original/img_20180929_123311-011793299432-982x1309.jpeg?1721688891"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/905/original/1643649083-screen-shot-2022-01-26-at-3-01-44-pm-1643649077.png?1721689151"
+          alt=""
+        />
+      </div>
+      <br />
+      <button>Buy a book!</button>
+    </div>
+    <footer>Coded by Jade Odusote 🌸</footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        /* body.classList.toggle("darken");*/
+
+        if (body.classList.contains("darken")) {
+          body.classList.remove("darken");
+        } else {
+          body.classList.add("darken");
+        }
+      }
+
+      let darkThemed = document.querySelector(".darkTheme");
+      darkThemed.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
